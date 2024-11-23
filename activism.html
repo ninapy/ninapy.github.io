@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activism - Nina's Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Fira Code', monospace;
+        }
+
+        body {
+            background-color: #001a2c;
+            color: #80deea;
+            line-height: 1.6;
+            padding: 2rem;
+            background: linear-gradient(
+                165deg,
+                #001a2c 0%,
+                #003355 40%,
+                #004d80 100%
+            );
+            min-height: 100vh;
+        }
+
+        .wave-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: -1;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent 0,
+                transparent 10px,
+                rgba(128, 222, 234, 0.1) 10px,
+                rgba(128, 222, 234, 0.1) 20px
+            );
+            animation: wave 15s linear infinite;
+        }
+
+        @keyframes wave {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .nav-button {
+            text-decoration: none;
+            color: #80deea;
+            padding: 0.5rem 1rem;
+            border: 1px solid #00bcd4;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            background: rgba(0, 188, 212, 0.1);
+        }
+
+        .nav-button:hover {
+            background-color: #00bcd4;
+            color: #001a2c;
+            box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+        }
+
+        .activism-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .activism-header h1 {
+            font-size: 2.5rem;
+            color: #00bcd4;
+            text-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+            margin-bottom: 1rem;
+        }
+
+        .activism-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .activism-section {
+            background: rgba(0, 25, 44, 0.8);
+            border-radius: 12px;
+            border: 1px solid #00bcd4;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .activism-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 188, 212, 0.3);
+        }
+
+        .activism-section h2 {
+            color: #00bcd4;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .activism-section h2 i {
+            font-size: 1.5rem;
+        }
+
+        .activism-content {
+            margin-bottom: 2rem;
+        }
+
+        .activism-content p {
+            margin-bottom: 1.5rem;
+            color: #4dd0e1;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .article-link {
+            background: rgba(0, 188, 212, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #00bcd4;
+            text-decoration: none;
+            color: #80deea;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .article-link:hover {
+            background: rgba(0, 188, 212, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 188, 212, 0.2);
+        }
+
+        .article-link i {
+            font-size: 1.2rem;
+            color: #00bcd4;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+            }
+
+            .nav-button {
+                text-align: center;
+            }
+
+            .activism-header h1 {
+                font-size: 2rem;
+            }
+
+            .activism-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wave-background"></div>
+
+    <nav>
+        <a href="index.html" class="nav-button">Home</a>
+        <a href="about.html" class="nav-button">About Me</a>
+        <a href="activism.html" class="nav-button">Activism</a>
+        <a href="#projects" class="nav-button">Projects</a>
+        <a href="research.html" class="nav-button">Research</a>
+        <a href="contact.html" class="nav-button">Contact</a>
+    </nav>
+
+    <div class="activism-container">
+        <div class="activism-header">
+            <h1>> Environmental Activism</h1>
+            <p></p>
+        </div>
+
+        <div class="activism-section">
+            <h2><i class="fas fa-pen-fancy"></i> Articles & Publications</h2>
+            <div class="activism-content">
+                <p>Explore my written work on environmental issues and climate activism:</p>
+                <div class="links-grid">
+                    <a href="https://sites.google.com/brown.edu/engl1050h-spring2023/home/py-brozovich-environmental-destruction-in-bolivia" class="article-link" target="_blank">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Environmental Destruction in Bolivia</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="activism-section">
+            <h2><i class="fas fa-globe-americas"></i> Environmental Activism in La Paz</h2>
+            <div class="activism-content">
+                <p>As a climate activist in La Paz, Bolivia, I've been featured in various international publications discussing environmental issues and youth climate action:</p>
+                <div class="links-grid">
+                    <a href="https://en.wikipedia.org/wiki/Nina_Py_Brozovich" class="article-link" target="_blank">
+                        <i class="fab fa-wikipedia-w"></i>
+                        <span>Wikipedia Profile</span>
+                    </a>
+                    <a href="https://elpais.com/planeta-futuro/2020-11-20/retrato-de-la-generacion-mas-preocupada-por-el-clima-de-la-historia.html" class="article-link" target="_blank">
+                        <i class="fas fa-newspaper"></i>
+                        <span>El País Feature</span>
+                    </a>
+                    <a href="https://www.laregion.bo/jovenes-latinoamericanos-profundizan-la-lucha-ante-la-crisis-climatica/" class="article-link" target="_blank">
+                        <i class="fas fa-newspaper"></i>
+                        <span>La Región Prensa Interview</span>
+                    </a>
+                    <a href="https://bolivianexpress.org/blog/posts/fighting-for-our-future" class="article-link" target="_blank">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Bolivian Express Article</span>
+                    </a>
+                    <a href="https://www.fluter.de/fridays-for-future-wie-gross-die-bewegung-weltweit-ist" class="article-link" target="_blank">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Fluter.de Coverage</span>
+                    </a>
+                    <a href="https://www.helvetas.org/Publications-PDFs/Switzerland/Partnerschaft-Partenaires-magazine/DE/PA_D_239_def_WEB_ES.pdf" class="article-link" target="_blank">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Helvetas Publication</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="activism-section">
+            <h2><i class="fas fa-paw"></i> Wildlife Conservation</h2>
+            <div class="activism-content">
+                <p>I've contributed to wildlife conservation efforts through my volunteer work at La Senda Verde, a wildlife refuge dedicated to rehabilitating victims of animal trafficking in Bolivia:</p>
+                <div class="links-grid">
+                    <a href="https://sendaverde.org/" class="article-link" target="_blank">
+                        <i class="fas fa-heart"></i>
+                        <span>La Senda Verde Wildlife Refuge</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
