@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Nina Py Brozovich</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Fira Code', monospace;
+        }
+
+        body {
+            background-color: #001a2c;
+            color: #80deea;
+            line-height: 1.6;
+            padding: 2rem;
+            background: linear-gradient(165deg, #001a2c 0%, #003355 40%, #004d80 100%);
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .nav-button {
+            text-decoration: none;
+            color: #80deea;
+            padding: 0.5rem 1rem;
+            border: 1px solid #00bcd4;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            background: rgba(0, 188, 212, 0.1);
+        }
+
+        .nav-button:hover {
+            background-color: #00bcd4;
+            color: #001a2c;
+            box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+        }
+
+        .research-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #00bcd4;
+            font-size: 2.5rem;
+        }
+
+        .research-section {
+            background: rgba(0, 25, 44, 0.8);
+            border-radius: 12px;
+            border: 1px solid #00bcd4;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .research-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+        }
+
+        .research-title {
+            color: #00bcd4;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .research-content {
+            display: none;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0, 188, 212, 0.3);
+        }
+
+        .research-content.active {
+            display: block;
+        }
+
+        .research-preview {
+            color: #4dd0e1;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+            }
+
+            .nav-button {
+                text-align: center;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-button">Home</a>
+        <a href="about.html" class="nav-button">About Me</a>
+        <a href="#activism" class="nav-button">Activism</a>
+        <a href="#projects" class="nav-button">Projects</a>
+        <a href="research.html" class="nav-button">Research</a>
+        <a href="#contact" class="nav-button">Contact</a>
+    </nav>
+
+    <div class="research-container">
+        <h1 class="page-title">> Research_Projects</h1>
+
+        <div class="research-section">
+            <h2 class="research-title">
+                <i class="fas fa-robot"></i>
+                Humanoid Robot Development Project
+            </h2>
+            <div class="research-preview">
+                Research project focused on developing an end-to-end open-source humanoid robot.
+                Project run by Tabitha Oanda, a second-year PhD student advised by Professor Nora Ayanian at Brown University.
+            </div>
+            <div class="research-content">
+            </div>
+            <a href="https://turquoise-laundry-fe5.notion.site/Humanoid-Robot-Development-Project-107bf89ad314809885b3c6a4679f54f2" class="read-more" onclick="toggleContent(this)">Read More ></a>
+        </div>
+
+        <div class="research-section">
+            <h2 class="research-title">
+                <i class="fas fa-square-root-alt"></i>
+                Team-Based Inquiry Learning in Mathematics
+            </h2>
+            <div class="research-preview">
+                Investigating the effectiveness of Team-Based Inquiry Learning approaches in Undergraduate Mathematics education. Based on qualitative analysis of student survey responses from a Team-Based Inquiry Learning class on Linear Algebra.
+                Reseach conducted with professor Jordan Kostiuk at Brown University.
+            </div>
+            <div class="research-content">
+            </div>
+            <a href="https://sites.google.com/southalabama.edu/tbil/what-is-tbil?authuser=0" class="read-more" onclick="toggleContent(this)">Read More ></a>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(button) {
+            const section = button.parentElement;
+            const content = section.querySelector('.research-content');
+            content.classList.toggle('active');
+            button.textContent = content.classList.contains('active') ? 'Read Less <' : 'Read More >';
+        }
+    </script>
+</body>
+</html>
