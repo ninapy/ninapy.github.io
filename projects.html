@@ -3,77 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Nina's Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Nina's Projects | Portfolio</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/ninapy.github.io/assets/images/logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Fira Code', monospace;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         body {
-            background-color: #001a2c;
-            color: #80deea;
+            background-color: #f8fafc;
+            color: #1e293b;
             line-height: 1.6;
-            padding: 2rem;
-            background: linear-gradient(
-                165deg,
-                #001a2c 0%,
-                #003355 40%,
-                #004d80 100%
-            );
             min-height: 100vh;
         }
 
-        .wave-background {
+        #matrix-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.1;
-            pointer-events: none;
             z-index: -1;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent 0,
-                transparent 10px,
-                rgba(128, 222, 234, 0.1) 10px,
-                rgba(128, 222, 234, 0.1) 20px
-            );
-            animation: wave 15s linear infinite;
+            opacity: 0.15;
         }
 
-        @keyframes wave {
-            0% { background-position: 0 0; }
-            100% { background-position: 50px 50px; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
         nav {
             display: flex;
             justify-content: flex-end;
-            gap: 2rem;
+            gap: 1rem;
             margin-bottom: 4rem;
+            flex-wrap: wrap;
         }
 
         .nav-button {
             text-decoration: none;
-            color: #80deea;
+            color: #059669;
             padding: 0.5rem 1rem;
-            border: 1px solid #00bcd4;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            background: rgba(0, 188, 212, 0.1);
+            border: 1px solid #059669;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+            background: rgba(248, 250, 252, 0.9);
         }
 
         .nav-button:hover {
-            background-color: #00bcd4;
-            color: #001a2c;
-            box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+            background-color: #059669;
+            color: white;
+            box-shadow: 0 0 15px rgba(5, 150, 105, 0.3);
         }
 
         .projects-header {
@@ -82,83 +69,60 @@
         }
 
         .projects-header h1 {
+            color: #059669;
             font-size: 2.5rem;
-            color: #00bcd4;
-            text-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
             margin-bottom: 1rem;
         }
 
         .projects-container {
-            max-width: 1200px;
-            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
         .project-card {
-            background: rgba(0, 25, 44, 0.8);
-            border-radius: 12px;
-            border: 1px solid #00bcd4;
+            background: rgba(248, 250, 252, 0.95);
             padding: 2rem;
-            transition: transform 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(0, 188, 212, 0.2),
-                transparent
-            );
-            transition: 0.5s;
-        }
-
-        .project-card:hover::before {
-            left: 100%;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 188, 212, 0.3);
+            box-shadow: 0 8px 15px rgba(5, 150, 105, 0.2);
+            border-color: #059669;
         }
 
         .project-icon {
             font-size: 2.5rem;
-            color: #00bcd4;
+            color: #059669;
             margin-bottom: 1.5rem;
             text-align: center;
         }
 
         .project-title {
             font-size: 1.5rem;
-            color: #80deea;
+            color: #059669;
             margin-bottom: 1rem;
             text-align: center;
-        }
-
-        .project-description {
-            color: #4dd0e1;
-            margin-bottom: 2rem;
-            text-align: justify;
         }
 
         .project-tech {
             display: inline-block;
             padding: 0.3rem 0.8rem;
-            background: rgba(0, 188, 212, 0.1);
-            border: 1px solid #00bcd4;
+            background: rgba(5, 150, 105, 0.1);
+            border: 1px solid #059669;
             border-radius: 20px;
             margin-bottom: 1.5rem;
-            color: #80deea;
+            color: #059669;
+        }
+
+        .project-description {
+            color: #1e293b;
+            margin-bottom: 2rem;
+            text-align: justify;
         }
 
         .button-container {
@@ -170,10 +134,10 @@
         .project-button {
             flex: 1;
             padding: 0.8rem;
-            border: 1px solid #00bcd4;
-            border-radius: 4px;
-            background: rgba(0, 188, 212, 0.1);
-            color: #80deea;
+            border: 1px solid #059669;
+            border-radius: 0.5rem;
+            background: rgba(5, 150, 105, 0.1);
+            color: #059669;
             text-decoration: none;
             text-align: center;
             transition: all 0.3s ease;
@@ -182,28 +146,14 @@
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
+            font-family: inherit;
+            font-size: inherit;
         }
 
         .project-button:hover {
-            background: #00bcd4;
-            color: #001a2c;
-            box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 1rem;
-            }
-
-            .nav-button {
-                text-align: center;
-            }
-
-            .projects-header h1 {
-                font-size: 2rem;
-            }
+            background: #059669;
+            color: white;
+            box-shadow: 0 0 15px rgba(5, 150, 105, 0.3);
         }
 
         .modal {
@@ -220,10 +170,10 @@
         }
 
         .modal-content {
-            background: #001a2c;
+            background: #f8fafc;
             padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid #00bcd4;
+            border-radius: 0.5rem;
+            border: 1px solid #059669;
             max-width: 800px;
             width: 90%;
             position: relative;
@@ -233,7 +183,7 @@
             position: absolute;
             top: 1rem;
             right: 1rem;
-            color: #80deea;
+            color: #059669;
             cursor: pointer;
             font-size: 1.5rem;
         }
@@ -245,92 +195,199 @@
             border-radius: 8px;
             margin-top: 1rem;
         }
+
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+            }
+
+            .projects-header h1 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="wave-background"></div>
-    <div class="floating-bits" id="floatingBits"></div>
+    <canvas id="matrix-bg"></canvas>
+    
+    <div class="container">
+        <nav>
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="about.html" class="nav-button">About Me</a>
+            <a href="activism.html" class="nav-button">Activism</a>
+            <a href="projects.html" class="nav-button">Projects</a>
+            <a href="research.html" class="nav-button">Research</a>
+            <a href="contact.html" class="nav-button">Contact</a>
+        </nav>
 
-    <nav>
-        <a href="index.html" class="nav-button">Home</a>
-        <a href="about.html" class="nav-button">About Me</a>
-        <a href="activism.html" class="nav-button">Activism</a>
-        <a href="projects.html" class="nav-button">Projects</a>
-        <a href="research.html" class="nav-button">Research</a>
-        <a href="contact.html" class="nav-button">Contact</a>
-    </nav>
+        <div class="projects-header">
+            <h1><span>></span> Coding_Projects<span>_</span></h1>
+        </div>
 
-    <div class="projects-header">
-        <h1>> Coding Projects</h1>
-        <p></p>
-    </div>
-
-    <div class="projects-container">
-        <div class="project-card">
-            <div class="project-icon">
-                <i class="fas fa-calculator"></i>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h2 class="project-title">LLL Algorithm</h2>
+                <span class="project-tech">Python</span>
+                <p class="project-description">
+                    Implementation of the Lenstra-Lenstra-Lovász (LLL) lattice basis reduction algorithm and the Gram-Schmidt orthogonalization process. Includes comprehensive tests and documentation on the algorithm's history and implementation details. Minimal dependencies (NumPy only).
+                </p>
+                <div class="button-container">
+                    <a href="https://github.com/ninapy/LLL-Algorithm" class="project-button" target="_blank">
+                        <i class="fab fa-github"></i>
+                        View Code
+                    </a>
+                    <button class="project-button" onclick="openDemo('lll')">
+                        <i class="fas fa-play"></i>
+                        Live Demo
+                    </button>
+                </div>
             </div>
-            <h2 class="project-title">LLL Algorithm</h2>
-            <span class="project-tech">Python</span>
-            <p class="project-description">
-                Implementation of the Lenstra-Lenstra-Lovász (LLL) lattice basis reduction algorithm and the Gram-Schmidt orthogonalization process. Includes comprehensive tests and documentation on the algorithm's history and implementation details. Minimal dependencies (NumPy only).
-            </p>
-            <div class="button-container">
-                <a href="https://github.com/ninapy/LLL-Algorithm" class="project-button" target="_blank">
-                    <i class="fab fa-github"></i>
-                    View Code
-                </a>
-                <button class="project-button" onclick="openDemo('lll')">
-                    <i class="fas fa-play"></i>
-                    Live Demo
-                </button>
+        
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h2 class="project-title">Pacman Simulation</h2>
+                <span class="project-tech">Java</span>
+                <p class="project-description">
+                    A Java implementation of the classic Pacman game, featuring pathfinding algorithms for ghost behavior and interactive gameplay mechanics.
+                </p>
+                <div class="button-container">
+                    <a href="#" class="project-button" target="_blank">
+                        <i class="fab fa-github"></i>
+                        View Code
+                    </a>
+                    <button class="project-button" onclick="openDemo('pacman')">
+                        <i class="fas fa-play"></i>
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+        
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h2 class="project-title">LanguageGo</h2>
+                <span class="project-tech">React</span>
+                <span class="project-tech">Node.js</span>
+                <p class="project-description">
+                    An interactive website designed for practicing typing in non-latin languages, with a current focus on Korean. Features include real-time typing feedback, progress tracking, and customizable practice sessions to help users build confidence in typing different character sets.
+                </p>
+                <div class="button-container">
+                    <a href="#" class="project-button" target="_blank">
+                        <i class="fab fa-github"></i>
+                        View Code
+                    </a>
+                    <button class="project-button" onclick="openDemo('languagego')">
+                        <i class="fas fa-play"></i>
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+        
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h2 class="project-title">AI Go Player</h2>
+                <span class="project-tech">Python</span>
+                <span class="project-tech">PyTorch</span>
+                <p class="project-description">
+                    An intelligent Go game player implementing various AI algorithms including Monte Carlo Tree Search, Alpha-Beta Pruning, and Neural Networks (Value and Policy Networks). Features multiple difficulty levels and ability to analyze game positions.
+                </p>
+                <div class="button-container">
+                    <a href="#" class="project-button" target="_blank">
+                        <i class="fab fa-github"></i>
+                        View Code
+                    </a>
+                    <button class="project-button" onclick="openDemo('goplayer')">
+                        <i class="fas fa-play"></i>
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+        
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h2 class="project-title">Peek-a-Text</h2>
+                <span class="project-tech">JavaScript</span>
+                <span class="project-tech">Tesseract.js</span>
+                <p class="project-description">
+                    A browser extension that enables text search within images on any webpage using OCR technology. Perfect for finding specific content in screenshots, diagrams, or any image-based text content while browsing.
+                </p>
+                <div class="button-container">
+                    <a href="#" class="project-button" target="_blank">
+                        <i class="fab fa-github"></i>
+                        View Code
+                    </a>
+                    <button class="project-button" onclick="openDemo('peekatext')">
+                        <i class="fas fa-play"></i>
+                        Live Demo
+                    </button>
+                </div>
+            </div>
+        
+            <div class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h2 class="project-title">Classify</h2>
+                <span class="project-tech">React</span>
+                <span class="project-tech">Firebase</span>
+                <p class="project-description">
+                    A collaborative platform where students can upload, organize, and download study notes. Features include advanced search by class, subject, and topics, rating system, and collaborative editing capabilities.
+                </p>
+                <div class="button-container">
+                    <a href="#" class="project-button" target="_blank">
+                        <i class="fab fa-github"></i>
+                        View Code
+                    </a>
+                    <button class="project-button" onclick="openDemo('classify')">
+                        <i class="fas fa-play"></i>
+                        Live Demo
+                    </button>
+                </div>
             </div>
         </div>
 
-        <div class="project-card">
-            <div class="project-icon">
-                <i class="fas fa-gamepad"></i>
-            </div>
-            <h2 class="project-title">Pacman Simulation</h2>
-            <span class="project-tech">Java</span>
-            <p class="project-description">
-                A Java implementation of the classic Pacman game, featuring pathfinding algorithms for ghost behavior and interactive gameplay mechanics.
-            </p>
-            <div class="button-container">
-                <a href="#" class="project-button" target="_blank">
-                    <i class="fab fa-github"></i>
-                    View Code
-                </a>
-                <button class="project-button" onclick="openDemo('pacman')">
-                    <i class="fas fa-play"></i>
-                    Live Demo
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Demo Modals -->
-    <div id="lllModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('lllModal')">&times;</span>
-            <h2>LLL Algorithm Demo</h2>
-            <div id="lllDemo" class="demo-frame">
-                <!-- Demo content will be loaded here -->
-            </div>
-        </div>
-    </div>
-
-    <div id="pacmanModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('pacmanModal')">&times;</span>
-            <h2>Pacman Simulation Demo</h2>
-            <div id="pacmanDemo" class="demo-frame">
-                <!-- Demo content will be loaded here -->
-            </div>
-        </div>
-    </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <script>
+        // Matrix rain effect
+        const canvas = document.getElementById('matrix-bg');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+
+        function draw() {
+            ctx.fillStyle = 'rgba(248, 250, 252, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#059669';
+            ctx.font = `${fontSize}px JetBrains Mono`;
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = Math.random() > 0.5 ? '1' : '0';
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        // Modal functions
         function openDemo(project) {
             const modal = document.getElementById(`${project}Modal`);
             modal.style.display = 'flex';
@@ -347,6 +404,14 @@
                 event.target.style.display = 'none';
             }
         }
+
+        // Initialize matrix effect
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        setInterval(draw, 33);
     </script>
 </body>
 </html>

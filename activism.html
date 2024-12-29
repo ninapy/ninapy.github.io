@@ -3,77 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activism - Nina's Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Nina's Activism - Portfolio</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/ninapy.github.io/assets/images/logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Fira Code', monospace;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         body {
-            background-color: #001a2c;
-            color: #80deea;
+            background-color: #f8fafc;
+            color: #1e293b;
             line-height: 1.6;
-            padding: 2rem;
-            background: linear-gradient(
-                165deg,
-                #001a2c 0%,
-                #003355 40%,
-                #004d80 100%
-            );
             min-height: 100vh;
         }
 
-        .wave-background {
+        #matrix-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0.1;
-            pointer-events: none;
             z-index: -1;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent 0,
-                transparent 10px,
-                rgba(128, 222, 234, 0.1) 10px,
-                rgba(128, 222, 234, 0.1) 20px
-            );
-            animation: wave 15s linear infinite;
+            opacity: 0.15;
         }
 
-        @keyframes wave {
-            0% { background-position: 0 0; }
-            100% { background-position: 50px 50px; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
         nav {
             display: flex;
             justify-content: flex-end;
-            gap: 2rem;
+            gap: 1rem;
             margin-bottom: 4rem;
+            flex-wrap: wrap;
         }
 
         .nav-button {
             text-decoration: none;
-            color: #80deea;
+            color: #059669;
             padding: 0.5rem 1rem;
-            border: 1px solid #00bcd4;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            background: rgba(0, 188, 212, 0.1);
+            border: 1px solid #059669;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+            background: rgba(248, 250, 252, 0.9);
         }
 
         .nav-button:hover {
-            background-color: #00bcd4;
-            color: #001a2c;
-            box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+            background-color: #059669;
+            color: white;
+            box-shadow: 0 0 15px rgba(5, 150, 105, 0.3);
         }
 
         .activism-header {
@@ -82,123 +69,100 @@
         }
 
         .activism-header h1 {
+            color: #059669;
             font-size: 2.5rem;
-            color: #00bcd4;
-            text-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
             margin-bottom: 1rem;
         }
 
-        .activism-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
         .activism-section {
-            background: rgba(0, 25, 44, 0.8);
-            border-radius: 12px;
-            border: 1px solid #00bcd4;
+            background: rgba(248, 250, 252, 0.95);
             padding: 2rem;
-            margin-bottom: 3rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
         }
 
         .activism-section:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 188, 212, 0.3);
+            box-shadow: 0 8px 15px rgba(5, 150, 105, 0.2);
+            border-color: #059669;
         }
 
         .activism-section h2 {
-            color: #00bcd4;
+            color: #059669;
+            font-size: 1.5rem;
             margin-bottom: 1.5rem;
-            font-size: 1.8rem;
             display: flex;
             align-items: center;
             gap: 1rem;
         }
 
-        .activism-section h2 i {
-            font-size: 1.5rem;
-        }
-
         .activism-content {
-            margin-bottom: 2rem;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
         }
 
         .activism-content p {
             margin-bottom: 1.5rem;
-            color: #4dd0e1;
         }
 
         .links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
-            margin-top: 2rem;
         }
 
         .article-link {
-            background: rgba(0, 188, 212, 0.1);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #00bcd4;
-            text-decoration: none;
-            color: #80deea;
-            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             gap: 1rem;
+            text-decoration: none;
+            color: #059669;
+            padding: 1rem;
+            border: 1px solid #059669;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            background: rgba(248, 250, 252, 0.9);
         }
 
         .article-link:hover {
-            background: rgba(0, 188, 212, 0.2);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 10px rgba(0, 188, 212, 0.2);
+            background-color: #059669;
+            color: white;
+            box-shadow: 0 0 15px rgba(5, 150, 105, 0.3);
         }
 
         .article-link i {
             font-size: 1.2rem;
-            color: #00bcd4;
         }
 
         @media (max-width: 768px) {
             nav {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 1rem;
-            }
-
-            .nav-button {
-                text-align: center;
+                justify-content: center;
             }
 
             .activism-header h1 {
                 font-size: 2rem;
             }
-
-            .activism-section {
-                padding: 1.5rem;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="wave-background"></div>
-    <div class="floating-bits" id="floatingBits"></div>
+    <canvas id="matrix-bg"></canvas>
+    
+    <div class="container">
+        <nav>
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="about.html" class="nav-button">About Me</a>
+            <a href="activism.html" class="nav-button">Activism</a>
+            <a href="projects.html" class="nav-button">Projects</a>
+            <a href="research.html" class="nav-button">Research</a>
+            <a href="contact.html" class="nav-button">Contact</a>
+        </nav>
 
-    <nav>
-        <a href="index.html" class="nav-button">Home</a>
-        <a href="about.html" class="nav-button">About Me</a>
-        <a href="activism.html" class="nav-button">Activism</a>
-        <a href="projects.html" class="nav-button">Projects</a>
-        <a href="research.html" class="nav-button">Research</a>
-        <a href="contact.html" class="nav-button">Contact</a>
-    </nav>
-
-    <div class="activism-container">
         <div class="activism-header">
-            <h1>> Environmental Activism</h1>
-            <p></p>
+            <h1><span>></span> Environmental_Activism<span>_</span></h1>
         </div>
 
         <div class="activism-section">
@@ -260,5 +224,45 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script>
+        // Matrix rain effect
+        const canvas = document.getElementById('matrix-bg');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+
+        function draw() {
+            ctx.fillStyle = 'rgba(248, 250, 252, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#059669';
+            ctx.font = `${fontSize}px JetBrains Mono`;
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = Math.random() > 0.5 ? '1' : '0';
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        // Initialize matrix effect
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        setInterval(draw, 33);
+    </script>
 </body>
 </html>

@@ -3,145 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research | Nina Py Brozovich</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Nina's Research - Portfolio</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/ninapy.github.io/assets/images/logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Fira Code', monospace;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         body {
-            background-color: #001a2c;
-            color: #80deea;
+            background-color: #f8fafc;
+            color: #1e293b;
             line-height: 1.6;
-            padding: 2rem;
-            background: linear-gradient(165deg, #001a2c 0%, #003355 40%, #004d80 100%);
             min-height: 100vh;
+        }
+
+        #matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.15;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
         nav {
             display: flex;
             justify-content: flex-end;
-            gap: 2rem;
+            gap: 1rem;
             margin-bottom: 4rem;
+            flex-wrap: wrap;
         }
 
         .nav-button {
             text-decoration: none;
-            color: #80deea;
+            color: #059669;
             padding: 0.5rem 1rem;
-            border: 1px solid #00bcd4;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            background: rgba(0, 188, 212, 0.1);
+            border: 1px solid #059669;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+            background: rgba(248, 250, 252, 0.9);
         }
 
         .nav-button:hover {
-            background-color: #00bcd4;
-            color: #001a2c;
-            box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+            background-color: #059669;
+            color: white;
+            box-shadow: 0 0 15px rgba(5, 150, 105, 0.3);
         }
 
-        .research-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .page-title {
+        .research-header {
             text-align: center;
-            margin-bottom: 3rem;
-            color: #00bcd4;
+            margin-bottom: 4rem;
+        }
+
+        .research-header h1 {
+            color: #059669;
             font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
         .research-section {
-            background: rgba(0, 25, 44, 0.8);
-            border-radius: 12px;
-            border: 1px solid #00bcd4;
+            background: rgba(248, 250, 252, 0.95);
             padding: 2rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
             margin-bottom: 2rem;
-            transition: transform 0.3s ease;
-            cursor: pointer;
         }
 
         .research-section:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+            box-shadow: 0 8px 15px rgba(5, 150, 105, 0.2);
+            border-color: #059669;
         }
 
         .research-title {
-            color: #00bcd4;
             font-size: 1.5rem;
+            color: #059669;
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
             gap: 1rem;
         }
 
+        .research-preview {
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
         .research-content {
             display: none;
             margin-top: 1rem;
             padding-top: 1rem;
-            border-top: 1px solid rgba(0, 188, 212, 0.3);
+            border-top: 1px solid rgba(5, 150, 105, 0.2);
         }
 
         .research-content.active {
             display: block;
         }
 
-        .research-preview {
-            color: #4dd0e1;
-            margin-bottom: 1rem;
-        }
-
         .read-more {
-            color: #00bcd4;
-            text-decoration: none;
-            font-weight: bold;
             display: inline-block;
+            text-decoration: none;
+            color: #059669;
+            padding: 0.5rem 1rem;
+            border: 1px solid #059669;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
             margin-top: 1rem;
         }
 
         .read-more:hover {
-            text-decoration: underline;
+            background-color: #059669;
+            color: white;
+            box-shadow: 0 0 15px rgba(5, 150, 105, 0.3);
         }
 
         @media (max-width: 768px) {
             nav {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 1rem;
+                justify-content: center;
             }
 
-            .nav-button {
-                text-align: center;
-            }
-
-            .page-title {
+            .research-header h1 {
                 font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="wave-background"></div>
-    <div class="floating-bits" id="floatingBits"></div>
-    <nav>
-        <a href="index.html" class="nav-button">Home</a>
-        <a href="about.html" class="nav-button">About Me</a>
-        <a href="activism.html" class="nav-button">Activism</a>
-        <a href="projects.html" class="nav-button">Projects</a>
-        <a href="research.html" class="nav-button">Research</a>
-        <a href="contact.html" class="nav-button">Contact</a>
-    </nav>
+    <canvas id="matrix-bg"></canvas>
+    
+    <div class="container">
+        <nav>
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="about.html" class="nav-button">About Me</a>
+            <a href="activism.html" class="nav-button">Activism</a>
+            <a href="projects.html" class="nav-button">Projects</a>
+            <a href="research.html" class="nav-button">Research</a>
+            <a href="contact.html" class="nav-button">Contact</a>
+        </nav>
 
-    <div class="research-container">
-        <h1 class="page-title">> Research_Projects</h1>
+        <div class="research-header">
+            <h1><span>></span> Research_Projects<span>_</span></h1>
+        </div>
 
         <div class="research-section">
             <h2 class="research-title">
@@ -154,7 +171,7 @@
             </div>
             <div class="research-content">
             </div>
-            <a href="https://turquoise-laundry-fe5.notion.site/Humanoid-Robot-Development-Project-107bf89ad314809885b3c6a4679f54f2" class="read-more" onclick="toggleContent(this)">Read More ></a>
+            <a href="https://turquoise-laundry-fe5.notion.site/Humanoid-Robot-Development-Project-107bf89ad314809885b3c6a4679f54f2" class="read-more" target="_blank">View Project ></a>
         </div>
 
         <div class="research-section">
@@ -164,21 +181,52 @@
             </h2>
             <div class="research-preview">
                 Investigating the effectiveness of Team-Based Inquiry Learning approaches in Undergraduate Mathematics education. Based on qualitative analysis of student survey responses from a Team-Based Inquiry Learning class on Linear Algebra.
-                Reseach conducted with professor Jordan Kostiuk at Brown University.
+                Research conducted with professor Jordan Kostiuk at Brown University.
             </div>
             <div class="research-content">
             </div>
-            <a href="https://sites.google.com/southalabama.edu/tbil/what-is-tbil?authuser=0" class="read-more" onclick="toggleContent(this)">Read More ></a>
+            <a href="https://sites.google.com/southalabama.edu/tbil/what-is-tbil?authuser=0" class="read-more" target="_blank">View Project ></a>
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <script>
-        function toggleContent(button) {
-            const section = button.parentElement;
-            const content = section.querySelector('.research-content');
-            content.classList.toggle('active');
-            button.textContent = content.classList.contains('active') ? 'Read Less <' : 'Read More >';
+        // Matrix rain effect
+        const canvas = document.getElementById('matrix-bg');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+
+        function draw() {
+            ctx.fillStyle = 'rgba(248, 250, 252, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#059669';
+            ctx.font = `${fontSize}px JetBrains Mono`;
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = Math.random() > 0.5 ? '1' : '0';
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
         }
+
+        // Initialize matrix effect
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        setInterval(draw, 33);
     </script>
 </body>
 </html>

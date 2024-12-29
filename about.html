@@ -1,170 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Nina | Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Fira Code', monospace;
-        }
-
-        body {
-            background-color: #001a2c;
-            color: #80deea;
-            line-height: 1.6;
-            padding: 2rem;
-            background: linear-gradient(165deg, #001a2c 0%, #003355 40%, #004d80 100%);
-            min-height: 100vh;
-        }
-
-        nav {
-            display: flex;
-            justify-content: flex-end;
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .nav-button {
-            text-decoration: none;
-            color: #80deea;
-            padding: 0.5rem 1rem;
-            border: 1px solid #00bcd4;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            background: rgba(0, 188, 212, 0.1);
-        }
-
-        .nav-button:hover {
-            background-color: #00bcd4;
-            color: #001a2c;
-            box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
-        }
-
-        .about-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: rgba(0, 25, 44, 0.8);
-            border-radius: 12px;
-            border: 1px solid #00bcd4;
-            box-shadow: 0 4px 15px rgba(0, 188, 212, 0.2);
-        }
-
-        .profile-section {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            align-items: start;
-        }
-
-        .profile-image {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 12px;
-            border: 2px solid #00bcd4;
-            box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
-        }
-
-        .bio-text {
-            flex: 1;
-        }
-
-        h1 {
-            color: #00bcd4;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            color: #4dd0e1;
-        }
-
-        .resume-button {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 1rem 2rem;
-            background: #00bcd4;
-            color: #001a2c;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            font-weight: bold;
-        }
-
-        .resume-button:hover {
-            background: #4dd0e1;
-            box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
-            transform: translateY(-2px);
-        }
-
-        .resume-button i {
-            margin-right: 0.5rem;
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 1rem;
-            }
-
-            .profile-section {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .profile-image {
-                width: 200px;
-                height: 200px;
-            }
-
-            .nav-button {
-                text-align: center;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="wave-background"></div>
-    <div class="floating-bits" id="floatingBits"></div>
-    
-    <nav>
-        <a href="index.html" class="nav-button">Home</a>
-        <a href="about.html" class="nav-button">About Me</a>
-        <a href="activism.html" class="nav-button">Activism</a>
-        <a href="projects.html" class="nav-button">Projects</a>
-        <a href="research.html" class="nav-button">Research</a>
-        <a href="contact.html" class="nav-button">Contact</a>
-    </nav>
-
-    <div class="about-container">
-        <div class="profile-section">
-            <img src="assets/images/nina.JPG" alt="Nina Py Brozovich" class="profile-image">
-            <div class="bio-text">
-                <h1>> About_Me</h1>
-                <p>
-                    Hi! My name is Nina. I'm from La Paz, Bolivia. I'm currently a junior undergraduate at Brown University, studying Computer-Science and Mathematics (Sc.B.).
-                </p>
-                <p>
-                    I'm passionate about nature and animals.
-                    I love music, especially latin american rock.
-                </p>
-                <a href="assets/docs/resume.pdf" class="resume-button" target="_blank">
-                    <i class="fas fa-file-alt"></i>
-                    View Resume
-                </a>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>About Nina | Portfolio</title>
+      <link rel="icon" type="image/png" sizes="32x32" href="/ninapy.github.io/assets/images/logo.png">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+      <style>
+         @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap');
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: 'JetBrains Mono', monospace;
+         }
+         body {
+         background-color: #f8fafc;
+         color: #1e293b;
+         line-height: 1.6;
+         min-height: 100vh;
+         }
+         #matrix-bg {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+         opacity: 0.2;
+         }
+         .container {
+         max-width: 64rem;
+         margin: 0 auto;
+         padding: 2rem;
+         }
+         nav {
+         display: flex;
+         justify-content: flex-end;
+         gap: 1rem;
+         margin-bottom: 4rem;
+         flex-wrap: wrap;
+         }
+         .nav-button {
+         text-decoration: none;
+         color: #059669;
+         padding: 0.5rem 1rem;
+         border: 1px solid #059669;
+         border-radius: 0.5rem;
+         transition: all 0.2s;
+         background: rgba(248, 250, 252, 0.9);
+         }
+         .nav-button:hover {
+         background-color: #059669;
+         color: white;
+         box-shadow: 0 0 15px rgba(5, 150, 105, 0.3);
+         }
+         .about-container {
+         background: rgba(248, 250, 252, 0.95);
+         padding: 2rem;
+         border-radius: 0.5rem;
+         border: 1px solid #e2e8f0;
+         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+         margin-top: 2rem;
+         }
+         .profile-section {
+         display: flex;
+         gap: 2rem;
+         margin-bottom: 2rem;
+         align-items: start;
+         }
+         .profile-image {
+         width: 300px;
+         height: 300px;
+         object-fit: cover;
+         border-radius: 0.5rem;
+         border: 2px solid #059669;
+         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+         }
+         .bio-text {
+         flex: 1;
+         }
+         h1 {
+         color: #059669;
+         margin-bottom: 1rem;
+         font-size: 2rem;
+         font-weight: 600;
+         }
+         h1 span {
+         color: #059669;
+         }
+         p {
+         color: #1e293b;
+         margin-bottom: 1rem;
+         }
+         .resume-btn {
+         display: inline-flex;
+         align-items: center;
+         gap: 0.5rem;
+         margin-top: 1rem;
+         padding: 0.75rem 1.5rem;
+         background-color: #059669;
+         color: white;
+         text-decoration: none;
+         border-radius: 0.5rem;
+         transition: all 0.2s;
+         font-size: 0.875rem;
+         }
+         .resume-btn:hover {
+         background-color: #047857;
+         transform: translateY(-2px);
+         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+         }
+         @media (max-width: 768px) {
+         .profile-section {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+         }
+         .profile-image {
+         width: 200px;
+         height: 200px;
+         }
+         nav {
+         justify-content: center;
+         }
+         .social {
+         display: flex;
+         justify-content: center;
+         gap: 2rem;
+         margin-bottom: 4rem;
+         align-items: center;
+         }
+         .social a {
+         color: #64748b;
+         transition: color 0.2s;
+         }
+         .social a:hover {
+         color: #059669;
+         }
+         /* New resume button styles */
+         .resume-btn {
+         background-color: #059669;
+         color: white;
+         padding: 0.5rem 1rem;
+         border-radius: 0.5rem;
+         text-decoration: none;
+         display: flex;
+         align-items: center;
+         gap: 0.5rem;
+         transition: background-color 0.2s;
+         font-size: 0.875rem;
+         }
+         .resume-btn:hover {
+         background-color: #047857;
+         color: white;
+         }
+         }
+      </style>
+   </head>
+   <body>
+      <canvas id="matrix-bg"></canvas>
+      <div class="container">
+         <nav>
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="about.html" class="nav-button">About Me</a>
+            <a href="activism.html" class="nav-button">Activism</a>
+            <a href="projects.html" class="nav-button">Projects</a>
+            <a href="research.html" class="nav-button">Research</a>
+            <a href="contact.html" class="nav-button">Contact</a>
+         </nav>
+         <div class="social">
+            <a href="https://github.com/ninapy"><i class="fab fa-github fa-lg"></i></a>
+            <a href="https://en.wikipedia.org/wiki/Nina_Py_Brozovich"><i class="fab fa-wikipedia-w fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/nina-py-brozovich/"><i class="fab fa-linkedin fa-lg"></i></a>
+            <a href="mailto:nina_py_brozovich@brown.edu"><i class="fas fa-envelope fa-lg"></i></a>
+         </div>
+         <div class="about-container">
+            <div class="profile-section">
+               <img src="assets/images/nina.JPG" alt="Nina Py Brozovich" class="profile-image">
+               <div class="bio-text">
+                  <h1><span>></span> About_Me<span>_</span></h1>
+                  <p>
+                     Hi! My name is Nina. I'm from La Paz, Bolivia. I'm currently a junior undergraduate at Brown University, studying Computer-Science and Mathematics (Sc.B.).
+                  </p>
+                  <p>
+                     I'm passionate about nature and animals.
+                     I love music, especially latin american rock.
+                  </p>
+                  <a href="assets/docs/resume.pdf" class="resume-btn" target="_blank">
+                  <i class="fas fa-file-download"></i>
+                  Download Resume
+                  </a>
+               </div>
             </div>
-        </div>
-    </div>
-</body>
+         </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+      <script>
+         // Matrix rain effect
+         const canvas = document.getElementById('matrix-bg');
+         const ctx = canvas.getContext('2d');
+         
+         canvas.width = window.innerWidth;
+         canvas.height = window.innerHeight;
+         
+         const fontSize = 14;
+         const columns = canvas.width / fontSize;
+         const drops = Array(Math.floor(columns)).fill(1);
+         
+         function draw() {
+             ctx.fillStyle = 'rgba(248, 250, 252, 0.05)';
+             ctx.fillRect(0, 0, canvas.width, canvas.height);
+         
+             ctx.fillStyle = '#059669';
+             ctx.font = `${fontSize}px JetBrains Mono`;
+         
+             for (let i = 0; i < drops.length; i++) {
+                 const text = Math.random() > 0.5 ? '1' : '0';
+                 ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+         
+                 if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                     drops[i] = 0;
+                 }
+                 drops[i]++;
+             }
+         }
+         
+         // Initialize
+         window.addEventListener('resize', () => {
+             canvas.width = window.innerWidth;
+             canvas.height = window.innerHeight;
+         });
+         
+         setInterval(draw, 33);
+      </script>
+   </body>
 </html>
