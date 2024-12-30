@@ -91,9 +91,10 @@
          .contact-item i {
          color: #059669;
          font-size: 1.5rem;
-         margin-right: 1.5rem;
+         margin-right: 2rem;  /* Changed from 5rem to 2rem for better spacing */
          width: 40px;
          text-align: center;
+         vertical-align: middle;
          }
          .contact-item-content {
          flex-grow: 1;
@@ -120,17 +121,6 @@
          font-size: 0.875rem;
          margin-top: 4rem;
          }
-         @media (max-width: 768px) {
-         .title {
-         font-size: 2rem;
-         }
-         .contact-item {
-         flex-direction: column;
-         text-align: center;
-         }
-         .contact-item i {
-         margin: 0 0 1rem 0;
-         }
          .social {
          display: flex;
          justify-content: center;
@@ -145,7 +135,6 @@
          .social a:hover {
          color: #059669;
          }
-         /* New resume button styles */
          .resume-btn {
          background-color: #059669;
          color: white;
@@ -162,12 +151,32 @@
          background-color: #047857;
          color: white;
          }
+         @media (max-width: 768px) {
+         .title {
+         font-size: 2rem;
+         }
+         .contact-item {
+         flex-direction: column;
+         text-align: center;
+         }
+         .contact-item i {
+         margin-right: 0;
+         margin-bottom: 1rem;
+         }
          }
       </style>
    </head>
    <body>
       <canvas id="matrix-bg"></canvas>
       <div class="container">
+         <nav>
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="about.html" class="nav-button">About Me</a>
+            <a href="activism.html" class="nav-button">Activism</a>
+            <a href="projects.html" class="nav-button">Projects</a>
+            <a href="research.html" class="nav-button">Research</a>
+            <a href="contact.html" class="nav-button">Contact</a>
+        </nav>
          <div class="console">
             <div class="console-text" id="console-output"></div>
             <span class="cursor">_</span>
@@ -182,7 +191,7 @@
                <a href="https://en.wikipedia.org/wiki/Nina_Py_Brozovich"><i class="fab fa-wikipedia-w fa-lg"></i></a>
                <a href="https://www.linkedin.com/in/nina-py-brozovich/"><i class="fab fa-linkedin fa-lg"></i></a>
                <a href="mailto:nina_py_brozovich@brown.edu"><i class="fas fa-envelope fa-lg"></i></a>
-               <a href="/path-to-your-resume.pdf" class="resume-btn" download style="color: white;">
+               <a href="/ninapy.github.io/assets/docs/resume.pdf" class="resume-btn" download style="color: white;">
                <i class="fas fa-file-download"></i>
                Download Resume
                </a>
