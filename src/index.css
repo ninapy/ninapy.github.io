@@ -1,0 +1,281 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: url('/cursor.png') 0 0, auto !important;
+  position: relative;
+  background-color: #ffffff;
+  z-index: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/background2.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0.5;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+}
+
+.window:hover,
+.browser-window:hover,
+.notepad-window:hover,
+.word-window:hover,
+.vscode-window:hover,
+.file-explorer:hover {
+  transform: translateY(-6px);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cell-wrapper:hover, .phone-wrapper:hover {
+  transform: translateY(-6px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.camera-wrapper:hover {
+  transform: scale(4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.desktop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+
+@font-face {
+  font-family: 'Tiny5';
+  src: url('./assets/fonts/Tiny5-Regular.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.pixel-font {
+  width: 1150px;
+  font-family: 'Tiny5', monospace;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+
+/* For camera, phone, and other icons */
+.media-icon, .camera-icon {
+  width: 180px;
+  display: block;
+  margin: 0 auto 6px auto;
+}
+
+.cell-icon {
+  width: 160px;
+  display: block;
+  margin: 0 auto 6px auto;
+}
+
+.media-section {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.media-pt1 {
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+}
+
+.media-pt2 {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.ipod-wrapper {
+  position: relative;
+  align-items: center;
+  display: flex;
+  margin-right: 75%;
+  margin-top: 1%;
+}
+
+.download-cv img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 80px;
+}
+
+.download-cv {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+.CV-section {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  margin-top: 3%;
+  margin-left: 65%;
+}
+
+.part1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+}
+
+.part2 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 3%;
+  margin-bottom: 1%;
+}
+
+.part3 {
+  display: flex;
+  flex-direction: row;
+  gap: 3%;
+}
+
+
+
+.wikipedia-icon i {
+  color: #000;
+}
+
+.linkedin-icon i {
+  color: #0077b5;
+}
+
+.github-icon i {
+  color: #333;
+}
+
+.part1-- {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0px;
+}
+
+.footer {
+  width: 100%;
+  padding: 1px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cell-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.cell-screen {
+  position: absolute;
+  top: 19%;
+  left: 47%;
+  width: 62px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  transform: rotate(15deg);
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.cell-screen img {
+  width: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cell-screen img:hover {
+  transform: scale(1.5);
+}
+
+.camera-wrapper {
+  position: relative;
+  width: fit-content;
+  z-index: 1;
+}
+
+.camera-screen {
+  position: absolute;
+  top: 32%;
+  left: 12.5%;
+  width: 77px;
+  height: 57px;
+  overflow: hidden;
+  pointer-events: none;
+  rotate: 0deg;
+}
+
+.camera-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  position: absolute;
+}
+
+.camera-screen img:hover {
+  transform: scale(5);
+  transition: transform 0.2s ease;
+}
+
+.phone-wrapper {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.phone-screen-text {
+  position: absolute;
+  top: 9%;
+  left: 25.5%;
+  width: 83px;
+  height: 54.5px;
+  background-color: white;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  padding: 4px;
+  transform: rotate(0deg);
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,122 @@
+.vscode-window {
+  width: 430px;
+  height: 310px;
+  background-color: #ffffff;
+  font-family: 'Courier New', monospace;
+  border: 1px solid #ccc;
+  color: #000;
+  box-shadow: 2px 2px 0 #aaa;
+}
+
+.window-container {
+  position: absolute;
+  transition: all 0.3s ease;
+  z-index: 1;
+  background: var(--your-background-color);
+}
+
+.window-container.maximized {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.vscode-title-bar {
+  display: flex;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #ddd;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.window-tab {
+  margin-right: 12px;
+  color: #555;
+}
+
+.window-tab.active {
+  color: #000;
+  font-weight: bold;
+}
+
+.vscode-toolbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.vscode-toolbar input {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #000;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  width: 140px;
+}
+
+.vscode-body {
+  margin: 5%;
+  background-color: #ffffff;
+  min-height: 200px;
+}
+
+.code-line .comment {
+  color: #008000;
+  font-style: italic;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+/* Use your skill-tag styles from before: */
+.skill-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 1px 1px 0 #000;
+  background-color: #333;
+  color: #fff;
+  white-space: nowrap;
+  transition: transform 0.1s ease;
+}
+.skill-tag:hover {
+  transform: scale(1.1);
+}
+
+.vscode-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  background-color: #007acc;
+  color: #ffffff;
+  margin-top: -17px;
+}
+
+.vscode-buttons button {
+  position: absolute;
+  margin-left: 95px;
+  margin-top: -10px;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  cursor: pointer;
+}

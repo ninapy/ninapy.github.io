@@ -1,0 +1,147 @@
+.word-window {
+  width: 480px;
+  height: 310px;
+  border: 2px solid #f5b0d1;
+  background: #ffe6f0;
+  font-family: 'Courier New', monospace;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.word-title-bar {
+  background: linear-gradient(to right, #E2639B, #f7a0cd);
+  color: white;
+  font-weight: bold;
+  padding: 6px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.window-buttons span {
+  margin-left: 6px;
+  font-size: 1rem;
+}
+
+.window-buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+.word-toolbar {
+  background: #fbd2e7;
+  padding: 4px 12px;
+  border-bottom: 2px solid #f2a5c6;
+}
+
+.menu-row span {
+  margin-right: 12px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.formatting-row {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.formatting-row select {
+  font-family: inherit;
+  padding: 2px 4px;
+  font-size: 0.75rem;
+  background: white;
+  border: 1px solid #d197af;
+  border-radius: 4px;
+}
+
+.icon-buttons button {
+  font-family: inherit;
+  margin-left: 6px;
+  background: white;
+  border: 1px solid #cc88aa;
+  padding: 4px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.word-body {
+  background: white;
+  height: 167px;
+  padding: 12px;
+  overflow: auto;
+  font-size: 0.85rem;
+  border-top: 1px solid #f5b0d1;
+  border-bottom: 1px solid #f5b0d1;
+}
+
+.word-status-bar {
+  background: #f9c4d9;
+  padding: 6px 12px;
+  font-size: 0.5rem;
+  display: flex;
+  gap: 12px;
+  border-top: 1px solid #e59ec0;
+}
+
+.articles-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.article-box-simple {
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  transition: transform 0.2s ease;
+  color: #000;
+}
+.article-box-simple img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.article-box-simple:hover {
+  transform: translateY(-6px);
+}
+
+.article-box-simple p {
+  font-size: 0.85rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.more-cta {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.environmental-work {
+  font-size: 1rem;
+}
+
+.link-activism {
+  font-size: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-activism:hover {
+  transform: translateY(-6px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #E2639B;
+}

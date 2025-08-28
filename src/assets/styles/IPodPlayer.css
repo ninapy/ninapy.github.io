@@ -1,0 +1,107 @@
+.ipod {
+  width: 180px;
+  height: 70px;
+  background-image: url('/images/B1.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: inset -2px -2px 8px #E2639B, inset 2px 2px 8px #E2639B;
+  padding: 12px;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10%;
+}
+
+/* 📺 Screen */
+.screen {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  background: black;
+  border: 3px solid #E2639B;
+  border-radius: 2px;
+  overflow: hidden;
+  color: white;
+  font-size: 0.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0px;
+  text-align: center;
+}
+
+.screen img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.screen p {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 0;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+/* 🎛 Click wheel */
+.wheel {
+  width: 80px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  border: 4px solid #ddd;
+  position: relative;
+  box-shadow: inset -2px -2px 6px #ffffff, inset 2px 2px 6px #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #E2639B;
+}
+
+.prev {
+  top: 35%;
+  left: 10%;
+  transform: translateX(-50%);
+}
+
+.next {
+  top: 53%;
+  left: 70%;
+  transform: translateY(-50%);
+}
+
+.play {
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* center circle */
+.center-circle {
+  width: 30px;
+  height: 30px;
+  background: #f5c6d6;
+  border-radius: 50%;
+  box-shadow: inset -1px -1px 4px #fff, inset 1px 1px 4px #aaa;
+}

@@ -1,0 +1,167 @@
+.browser-window {
+  width: 430px;
+  height: 310px;
+  border: 2px solid #b3cde0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', sans-serif;
+  background: white;
+}
+
+.browser-header {
+  background: linear-gradient(to bottom, #e6f0f8, #d1e0ed);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #aac2d2;
+}
+
+.left-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.back-btn {
+  background: #dfefff;
+  border: 1px solid #aac2d2;
+  padding: 4px 8px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.address-bar {
+  flex: 1;
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: 1px solid #aac2d2;
+  background-color: white;
+}
+
+.tab-bar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.tab {
+  background: #ffffff;
+  border: 1px solid #aac2d2;
+  padding: 4px 10px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.active {
+  background: #f5faff;
+  font-weight: bold;
+}
+
+.window-controls {
+  display: flex;
+  gap: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.window-controls .close {
+  color: red;
+}
+
+.browser-body {
+  margin-top: 2%;
+  margin-left: 5%;
+  background: white;
+  min-height: 200px;
+}
+
+.body-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.text-body {
+  font-size: 1.1rem;
+  line-height: 0.5;
+}
+
+.title-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-right: 8%;
+}
+
+.icon-btn {
+  width: 28px;
+  border-radius: 4px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon-btn:hover {
+  transform: scale(1.5);
+}
+
+.about-icons {
+  margin-top: 8%;
+  display: flex;
+  gap: 20px;
+  font-size: 1.5rem;
+}
+
+.about-icons a {
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.about-icons a:hover {
+  transform: scale(2.5);
+  opacity: 1;
+}
+
+.map-icon-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.map-box {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 360px;
+  height: 260px;
+  z-index: 999;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #222;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.map-popup {
+  pointer-events: auto;
+  overflow: auto;
+  touch-action: auto;
+  top: 100%;
+  position: absolute;
+}
+
+.instep-link, .infosys-link, .brown-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.instep-link:hover, .infosys-link:hover, .brown-link:hover {
+  color: #E2639B;
+  text-decoration: underline;
+}
