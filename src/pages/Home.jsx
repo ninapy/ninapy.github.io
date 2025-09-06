@@ -102,7 +102,9 @@ export default function Home() {
         <NotepadWindow />
 
         <WordWindow>
-          <span className='environmental-work'>°❀⋆.ೃ࿔*:･ Environmental Work °❀⋆.ೃ࿔*:･ </span>
+          <span className='environmental-work-title' style={{ display: 'block', marginBottom: '0%' }}>°❀⋆.ೃ࿔* Environmental Work and Advocacy °❀⋆.ೃ࿔* </span>
+
+          <span className='environmental-work'>Founder of Fridays For Future Bolivia and UNICEF #OneGeneration ambassador, I've represented youth at the UN's first Youth Climate Summit, volunteered for wildlife rescue and community initiatives in Bolivia and Tanzania, and published reporting on Bolivia's environmental crisis. Check out my work!</span>
           
           <div className="articles-section">
             <a
@@ -166,7 +168,7 @@ export default function Home() {
               <Link to="/media" className="phone-section">
                 <img src={phone} className="media-icon" alt="Phone" />
                 <div className="phone-screen-text">
-                  Read my vlogs!
+                  Read my blogs!
                 </div>
               </Link>
             </div>

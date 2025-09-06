@@ -1,6 +1,6 @@
 .vscode-window {
   width: 430px;
-  height: 310px;
+  height: 330px;
   background-color: #ffffff;
   font-family: 'Courier New', monospace;
   border: 1px solid #ccc;
@@ -108,7 +108,7 @@
   font-size: 0.75rem;
   background-color: #007acc;
   color: #ffffff;
-  margin-top: -17px;
+  margin-top: -1px;
 }
 
 .vscode-buttons button {

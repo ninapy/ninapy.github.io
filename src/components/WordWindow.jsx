@@ -20,7 +20,7 @@ export default function WordWindow({ children }) {
         </div>
       </div>
 
-      <div className="word-toolbar">
+      {/* <div className="word-toolbar">
         <div className="menu-row">
           <span>File</span>
           <span>Edit</span>
@@ -53,7 +53,7 @@ export default function WordWindow({ children }) {
             <button><u>U</u></button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="word-body">
         {children}

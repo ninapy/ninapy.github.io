@@ -31,7 +31,7 @@ export default function NotepadWindow({ children }) {
               src="/images/R01.png"
               alt="facemesh"
             />
-            <span><b>@Infosys 🇮🇳</b> Human-to-Robot Facial Expression Mapping with GNNs</span>
+            <span>@Infosys 🇮🇳 Human-to-Robot Facial Expression Mapping with GNNs</span>
           </a>
 
 

@@ -30,7 +30,7 @@ export default function BrowserWindow({ children }) {
 
           <div className="title-icons">
             {/* Map Icon */}
-            <a href="/map.html">
+            <a>
               <img src="/images/I1.png" alt="Map Icon" className="icon-btn" />
             </a>
 

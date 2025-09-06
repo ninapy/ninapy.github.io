@@ -1,6 +1,6 @@
 .word-window {
   width: 480px;
-  height: 310px;
+  height: 330px;
   border: 2px solid #f5b0d1;
   background: #ffe6f0;
   font-family: 'Courier New', monospace;
@@ -73,8 +73,10 @@
 
 .word-body {
   background: white;
-  height: 167px;
-  padding: 12px;
+  height: 265px;
+  padding-top: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
   overflow: auto;
   font-size: 0.85rem;
   border-top: 1px solid #f5b0d1;
@@ -130,8 +132,12 @@
   text-decoration: underline;
 }
 
-.environmental-work {
+.environmental-work-title {
   font-size: 1rem;
+}
+
+.environmental-work {
+  font-size: 0.8rem;
 }
 
 .link-activism {
